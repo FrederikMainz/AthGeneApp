@@ -39,60 +39,35 @@ class FeedTableViewController: UITableViewController {
                 }
                 
             }
-            
-            
-            let getFollowedUsersQuery = PFQuery(className: "Followers")
-            
-            getFollowedUsersQuery.whereKey("follower", equalTo: (PFUser.current()?.objectId!)!)
-            
-            getFollowedUsersQuery.findObjectsInBackground(block: { (objects, error) in
                 
-                if let followers = objects {
+
+                let query = PFQuery(className: "Posts")
+                
+                query.findObjectsInBackground(block: { (objects, error) in
                     
-                    for object in followers {
+                    if let posts = objects {
                         
-                        if let follower = object as? PFObject {
+                        for object in posts {
                             
-                            let followedUser = follower["following"] as! String
-                            
-                            let query = PFQuery(className: "Posts")
-                            
-                            query.whereKey("userid", equalTo: followedUser)
-                            
-                            query.findObjectsInBackground(block: { (objects, error) in
+                            if let post = object as? PFObject {
                                 
-                                if let posts = objects {
-                                    
-                                    for object in posts {
-                                        
-                                        if let post = object as? PFObject {
-                                            
-                                            self.messages.append(post["message"] as! String)
-                                            
-                                            self.imageFiles.append(post["imageFile"] as! PFFile)
-                                            
-                                            self.usernames.append(self.users[post["userid"] as! String]!)
-                                            
-                                            self.tableView.reloadData()
-                                            
-                                        }
-                                        
-                                        
-                                    }
-                                    
-                                }
+                                self.messages.append(post["message"] as! String)
                                 
+                                self.imageFiles.append(post["imageFile"] as! PFFile)
                                 
-                            })
+                                self.usernames.append(self.users[post["userid"] as! String]!)
+                                
+                                self.tableView.reloadData()
+                                
+                            }
+                            
                             
                         }
                         
-                        
                     }
                     
-                }
-                
-            })
+                    
+                })
             
             
         })
