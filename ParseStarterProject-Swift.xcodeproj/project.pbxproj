@@ -28,6 +28,7 @@
 		9354674F1E50EF0C00BD773E /* ic_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 9354674B1E50EF0C00BD773E /* ic_home.png */; };
 		935467501E50EF0C00BD773E /* ic_home_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9354674C1E50EF0C00BD773E /* ic_home_2x.png */; };
 		935467511E50EF0C00BD773E /* ic_home_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9354674D1E50EF0C00BD773E /* ic_home_3x.png */; };
+		935467531E51144400BD773E /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935467521E51144300BD773E /* SettingsTableViewCell.swift */; };
 		BD73C1B21E379E35001A1512 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD73C1B11E379E35001A1512 /* QuartzCore.framework */; };
 		BD73C1BA1E3F38CC001A1512 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73C1B91E3F38CC001A1512 /* UserTableViewController.swift */; };
 		BD73C1BC1E3F55BD001A1512 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD73C1BB1E3F55BD001A1512 /* PostViewController.swift */; };
@@ -66,6 +67,7 @@
 		9354674B1E50EF0C00BD773E /* ic_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home.png; sourceTree = "<group>"; };
 		9354674C1E50EF0C00BD773E /* ic_home_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home_2x.png; sourceTree = "<group>"; };
 		9354674D1E50EF0C00BD773E /* ic_home_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_home_3x.png; sourceTree = "<group>"; };
+		935467521E51144300BD773E /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		BD73C1B11E379E35001A1512 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BD73C1B91E3F38CC001A1512 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		BD73C1BB1E3F55BD001A1512 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				BDDAD8BA1E4A3429002BABA9 /* AppDelegate.swift */,
 				BDDAD8B81E4A33B1002BABA9 /* ViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				935467521E51144300BD773E /* SettingsTableViewCell.swift */,
 				9313C50C1E4A6CE400118F07 /* SettingsTableViewController.swift */,
 				BD73C1C11E3F7A83001A1512 /* FeedTableViewCell.swift */,
 				BD73C1BF1E3F7951001A1512 /* FeedTableViewController.swift */,
@@ -297,6 +300,7 @@
 			files = (
 				BD73C1BC1E3F55BD001A1512 /* PostViewController.swift in Sources */,
 				BD73C1C21E3F7A83001A1512 /* FeedTableViewCell.swift in Sources */,
+				935467531E51144400BD773E /* SettingsTableViewCell.swift in Sources */,
 				BD73C1C01E3F7951001A1512 /* FeedTableViewController.swift in Sources */,
 				BD73C1C41E40BF06001A1512 /* CategoryTableViewCell.swift in Sources */,
 				9313C50D1E4A6CE400118F07 /* SettingsTableViewController.swift in Sources */,

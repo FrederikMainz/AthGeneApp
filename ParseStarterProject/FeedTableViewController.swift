@@ -20,6 +20,7 @@ class FeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         
         let query = PFUser.query()
         
@@ -120,13 +121,8 @@ class FeedTableViewController: UITableViewController {
         cell.categoryInfoLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         cell.categoryInfoLabel.numberOfLines = 3
         
-        
-        
         cell.categoryInfoLabel.text = categoryInfos[indexPath.row]
         
-     
-        
-     
         return cell
     }
     

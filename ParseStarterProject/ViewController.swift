@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     
     @IBAction func signupOrLogin(_ sender: AnyObject) {
         
-        if emailTextField.text == "" || passwordTextField.text == "" { // || nameTextField.text == ""
+        if emailTextField.text == "" || passwordTextField.text == "" {
             
             createAlert(title: "Error in form", message: "Please enter a valid name, email and password")
             
