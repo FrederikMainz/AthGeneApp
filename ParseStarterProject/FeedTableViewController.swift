@@ -13,11 +13,13 @@ class FeedTableViewController: UITableViewController {
     
     var users = [String: String]()
     var messages = [String]()
+    var categoryInfos = [String]()
     var usernames = [String]()
     var imageFiles = [PFFile]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         let query = PFUser.query()
         
@@ -54,6 +56,8 @@ class FeedTableViewController: UITableViewController {
                                 self.messages.append(post["message"] as! String)
                                 
                                 self.imageFiles.append(post["imageFile"] as! PFFile)
+                                
+                                self.categoryInfos.append(post["categoryInfo"] as! String)
                                 
                                 self.usernames.append(self.users[post["userid"] as! String]!)
                                 
@@ -111,10 +115,18 @@ class FeedTableViewController: UITableViewController {
         
         cell.postedImage.image = UIImage(named: "msn-people-person-profile-user-icon--icon-search-engine-11.png")
         
-        cell.usernameLabel.text = usernames[indexPath.row]
-        
         cell.messageLabel.text = messages[indexPath.row]
         
+        cell.categoryInfoLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        cell.categoryInfoLabel.numberOfLines = 3
+        
+        
+        
+        cell.categoryInfoLabel.text = categoryInfos[indexPath.row]
+        
+     
+        
+     
         return cell
     }
     
